@@ -1,0 +1,36 @@
+@use "color";
+@use "font";
+@use "border";
+@use "radius";
+@use "spaceing";
+@use "layout";
+/* component */
+.link{
+    display: inline-block;
+    padding-bottom:calc(var(--sp-xxs) - 1px);
+    border-bottom:1px solid;
+}
+.section-header{
+    min-height: 400px;
+    background-color: rbga(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--sp-5xl) 0;
+    gap: var(--sp-l);
+    background-color: var(--color-Neutral-100);
+    color:var(--color-Neutral-600);
+}
+.ARR{
+    // padding-top: var(--sp-xl);
+    display: grid;
+    gap: var(--sp-xxs);
+    text-align:center;
+    color:var(--color-Neutral-600);
+    @extend .text-sm;
+}

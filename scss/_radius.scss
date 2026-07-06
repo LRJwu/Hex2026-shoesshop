@@ -1,0 +1,77 @@
+/* Radius 圓角 */
+$radius-size: (
+  "0":0,
+  "rounded":1000px,
+  "sm":4px,
+  "md":12px,
+);
+$radiusDirection: (
+  "":"",
+  "-tl":"top-left",
+  "-tr":"top-right",
+  "-bl":"bottom-left",
+  "-br":"bottom-right",
+  "-t":("top-right", "top-left"),
+  "-b":("bottom-right", "bottom-left"),
+);
+
+:root {
+  @each $size, $value in $radius-size {
+    @if($size=="rounded") {
+      --round:#{$value};
+    }
+
+    @else {
+      --round-#{$size}:#{$value};
+    }
+  }
+}
+
+$selector: ".round";
+$property: "border-radius";
+
+#{$selector}-0 {
+  #{$property}: 0;
+}
+
+@each $name, $pro in $radiusDirection {
+  @each $size, $value in $radius-size {
+    $selector: ".round" +#{$name};
+
+    @if($size=="rounded") {
+      #{$selector} {
+        @each $subPro in $pro {
+          @if($subPro != "") {
+            $property: "border-" +#{$subPro}+"-radius";
+            #{$property}: var(--round);
+          }
+          @else{
+            $property: "border-radius";
+            #{$property}: var(--round);
+
+          }
+        }
+      }
+    }
+
+    @else {
+      $selector: #{$selector}+"-" +#{$size};
+
+      #{$selector} {
+        @each $subPro in $pro {
+          @if($subPro != "") {
+            $property: "border-" +#{$subPro}+"-radius";
+            #{$property}:var(--round-#{$size})
+          }
+          @else{
+            $property: "border-radius";
+            #{$property}:var(--round-#{$size})
+
+          }
+        }
+
+        ;
+      }
+    }
+  }
+}

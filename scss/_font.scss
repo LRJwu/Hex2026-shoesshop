@@ -1,0 +1,69 @@
+@use "sass:map";
+@use "sass:string";
+@use "sass:list";
+/* Typography 文字 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+$t-lh:(1.2,1.5);
+$t-spaceing:5%;
+$fw:(900,700,500,400);
+$t-size:(
+  "dispaly-1": ("font-size":64px),
+  "dispaly-2": ("font-size":48px),
+  "h1": ("font-size":40px),
+  "h2": ("font-size":32px),
+  "h3": ("font-size":28px),
+  "h4": ("font-size":24px),
+  "h5": ("font-size":20px),
+  "h6": ("font-size":16px),
+  "label-lg": ("font-size":20px),
+  "label-md": ("font-size":16px),
+  "label-sm": ("font-size":14px),
+  "label-xs": ("font-size":12px),
+  "text-lg": ("font-size":20px),
+  "text-md": ("font-size":16px),
+  "text-sm": ("font-size":14px),
+  "text-xs": ("font-size":12px),
+);
+body{
+    font-family:"Noto Sans TC",sans-serif;
+    color:var(--color-Neutral-900,#212529);
+    font-weight: var(--fw,400);
+    font-size: var(--Paragraph-md,16px);
+    line-height: var(--lh,1.5);
+    letter-spacing:var(--ls,5%)
+}
+:root{
+  @each $value in $fw{
+    --fw-#{$value}:#{$value};
+  }
+}
+@each $value in $fw{
+  .fw-#{$value}{ font-weight: #{$value}};
+}
+
+.lspace{ letter-spacing: $t-spaceing; }
+@each $lh in $t-lh{
+  .lh-#{$lh * 10}{line-height:#{$lh}};
+}
+@each $selector,$declaration in $t-size{
+  .#{$selector}{
+    @each $property,$value in $declaration{
+        #{$property}:#{$value};
+        @extend .lspace;
+        @if (string.index($selector,"text-") or string.index($selector,"label-")){
+          @extend .lh-#{list.nth($t-lh,2) * 10};
+        }@else{
+          @extend .lh-#{list.nth($t-lh,1) * 10};
+        }
+      }
+    }
+}
+@for $i from 1 through 6{
+  h#{$i}{
+    @extend .h#{$i};
+    @extend .fw-700;
+  }
+}
+.display-1,.display-2{ @extend .fw-700; }
+.label-lg, .label-md, .label-sm, .label-xs{ @extend .fw-500; }
+.text-center{ text-align:center;}

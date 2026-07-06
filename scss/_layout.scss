@@ -1,0 +1,77 @@
+/* layout 容器*/
+$grid-column:12;
+$grid-column-mobile:4;
+$gap:24px;
+$gap-mobile:16px;
+$max-width:1296px;
+$min-width:375px;
+$display:( block, flex, grid, inline-flex, );
+$flex-justify:(
+  "start":"flex-start",
+  "center":"center",
+  "end":"flex-end",
+  "between":"space-between",
+  "around":"space-around",
+  "evenly":"space-evenly",
+);
+$flex-align:(
+  "start":"flex-start",
+  "center":"center",
+  "end":"flex-end",
+  "stretch":"stretch",
+  "baseline":"baseline",
+);
+:root{
+  --gap:#{$gap};
+  --grid:#{$grid-column};
+}
+.container{
+  width: 100%;
+  max-width:#{$max-width};
+  margin:0 auto;
+  display: grid;
+  grid-column: var(--grid);
+  gap:var(--gap);
+}
+.content{
+  width: 100%;
+  max-width: 856px;
+  margin: 0 auto;
+}
+.w-100{width:100%;}
+.w-1000{max-width: 1000px;margin: auto;}
+@each $property in $display{
+  .d-#{$property}{display:#{$property};}
+}
+// flex對齊
+.row{
+  display:flex;
+  flex-wrap:wrap;
+}
+@each $name,$value in $flex-justify{
+  .justify-#{$name}{justify-content:#{$value};}
+}
+@each $name,$value in $flex-align{
+  .align-#{$name}{align-items:#{$value};}
+}
+// column 隔線系統
+.col{
+  flex:1;
+}
+@for $i from 1 through $grid-column{
+  .col-#{$i}{
+    max-width: calc((100% - (var(--gap) * (var(--grid) - 1))) / var(--grid) * #{$i} + (var(--gap) * (#{$i} - 1)));
+    //100%-(gap*(12-1))/12*1=86px
+    //100%-(gap*(12-1))/12*2+gap*(2-1)
+  }
+}
+//小螢幕 Mobile
+@media screen and (max-width:$max-width){
+  :root{
+    // --grid:#{$grid-column-mobile};
+    --gap:#{$gap-mobile};
+  }
+  .container{
+    padding:0 var(--gap);
+  }
+}

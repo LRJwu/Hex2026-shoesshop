@@ -1,0 +1,52 @@
+/* spacing 間距 */
+$spacingType:('m':"margin",'p':"padding",'g':"gap");
+$spacing:(
+  "0":0,
+  "xxs":4px,
+  "xs":8px,
+  "s":12px,
+  "m":16px,
+  "l":24px,
+  "xl":32px,
+  "2xl":40px,
+  "3xl":48px,
+  "4xl":56px,
+  "5xl":64px,
+  "6xl":80px,
+  "auto":"auto",
+);
+$spacingDirection:(
+  "t": "-top",
+  "b": "-bottom",
+  "l": "-left",
+  "r": "-right",
+  "x":("-right","-left"),
+  "y":("-top","-bottom"),
+  "":"",
+);
+:root{
+  @each $size,$value in $spacing{
+    --sp-#{$size}:#{$value};
+  }
+}
+@each $name,$pro in $spacingType{
+  $selector:"."+#{$name};
+  $property:$pro;
+  @each $size,$value in $spacing{
+  $selector:"."+#{$name}+"-"+$size;
+    #{$selector}{#{$property}:var(--sp-#{$size})!important;}
+    @if($name != "g"){//gap 不需要方向
+      @each $dirName,$dirPro in $spacingDirection{
+        $selector:"."+#{$name}+#{$dirName}+"-"+$size;
+        
+        #{$selector}{
+          @each $subDir in $dirPro{
+            $property:$pro+$subDir;
+            #{$property}:var(--sp-#{$size});
+            
+          }
+        }        
+      }
+    }
+  }
+}

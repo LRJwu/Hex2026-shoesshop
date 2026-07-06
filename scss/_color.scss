@@ -1,0 +1,49 @@
+/* color 顏色*/
+$colors:(
+  "Primary":(
+    // 主色用於產品畫面中的重點、CTA按鈕，需符合20%原則，避免過多主色分散注意
+    100:#F5FEE7, 200:#E8FEC5, 300:#C0FA73, 400:#57A203, 500:#477A11, 
+  ),
+  "Neutral":(
+    // 用於文字、表格、分隔線等基礎介面元素，創造和諧的視覺體驗，不搶走主要內容的注意力
+    0:#FFFFFF, 100:#F8F9FA, 200:#E9ECEF, 300:#DEE2E6, 400:#CED4DA, 500:#ADB5BD, 
+    600:#6C757D, 700:#495057, 800:#343A40, 900:#212529, 950:#23272E,
+  ),
+  // Functional
+  "danger":( 100:#FCF1F1, 200:#EBA7A7, 300:#E9ECEF,),
+  "Warning":(100:#FEF6EC, 200:#F9C588, 300:#F38B12,),
+  "Success":(100:#EFF8F4, 200:#9AD1BA, 300:#36A375,),
+  "Info":(100:#EEF5FC, 200:#97C3ED, 300:#3087DB,),
+);
+:root{
+  @each $cName,$shades in $colors{
+    @each $sName,$value in $shades{
+      --color-#{$cName}-#{$sName}:#{$value};
+    }
+  }
+}
+/* background color 背景顏色*/
+@each $cName,$shades in $colors{
+  @each $sName,$value in $shades{
+    .bg-#{$cName}-#{$sName}{background-color:var(--color-#{$cName}-#{$sName});}
+  }
+}
+.bg-white{ background-color:var(--color-Neutral-0); }
+/* text color 文字顏色*/
+@each $cName,$shades in $colors{
+  @each $sName,$value in $shades{
+  .text-#{$cName}-#{$sName}{color:var(--color-#{$cName}-#{$sName});}
+  }
+}
+.text-white{ color:var(--color-Neutral-0); }
+.text-primay { color: var(--color-Neutral-900); }
+.text-secondary { color: var(--color-Neutral-600); }
+.text-highlight { color: var(--color-Primary-400); }
+.text-on-dark { color: var(--color-Neutral-0); }
+
+@media dark { 
+  body {
+    background: var(--color-Neutral-950);
+    color: var(--color-Neutral-0);
+  }
+}

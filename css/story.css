@@ -1,0 +1,22 @@
+.section-header {
+  background: url(../img/story/hero.png) center center/cover no-repeat;
+}
+
+.list li {
+  list-style: disc;
+  margin-left: 1.5em;
+}
+
+.list-border-l li {
+  list-style-type: none;
+  border-left: 3px solid var(--color-Neutral-300);
+  padding: 0 var(--sp-s);
+  margin-left: 0;
+}
+
+.ulLink-arrow-up-right li {
+  font-family: bootstrap-icons !important;
+  list-style: "\f144";
+  font-size: 15px;
+  padding-left: 10.5px;
+}/*# sourceMappingURL=story.css.map */
