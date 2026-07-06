@@ -1,12 +1,12 @@
 @use "spaceing" as spc;
 /* border 邊框　*/
-.border:before,hr{border:1px solid inherit;}
+.border,hr{border:1px solid inherit;}
 @each $dirName,$dirPro in spc.$spacingDirection{
   @if($dirName != ""){
-    .border-#{$dirName}:after{
+    .border-#{$dirName}{
       @each $subPro in $dirPro{
-        content: "";
-        width: 100%;
+        // content: "";
+        // width: 100%;
         border#{$subPro}:1px solid;
       }
     }

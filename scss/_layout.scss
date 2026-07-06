@@ -72,6 +72,7 @@ $flex-align:(
     --gap:#{$gap-mobile};
   }
   .container{
-    padding:0 var(--gap);
+    padding-right: var(--gap);
+    padding-left: var(--gap);
   }
 }
