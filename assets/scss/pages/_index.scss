@@ -1,3 +1,16 @@
-.index-title {
-  font-size: 100px;
+.bg-1 {
+  background: url("/assets/images/index/banner.png")no-repeat center/cover;
+  background-color: var(--bs-gray-900);
+  color: white;
+  @include media-breakpoint-down(md){
+    background-image: url(/assets/images/index/banner-sm.png);
+  }
+}
+.bg-2 {
+  background: url("/assets/images/index/banner-co-branded.png")no-repeat center/cover;
+  background-color: var(--bs-gray-900);
+  color: white;
+  @include media-breakpoint-down(md){
+    background-image: url(/assets/images/index/banner-co-branded-sm.png);
+  }
 }
