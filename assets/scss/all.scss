@@ -9,7 +9,8 @@
 // 2. 專案變數設定
 // 放品牌色、字體、間距、圓角，以及需要覆蓋的 Bootstrap 變數
 // 必須放在 Bootstrap 主程式之前，才能影響 Bootstrap 的編譯結果
-// @import "./helpers/variables";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import "./helpers/variables";
 
 // 3. 專案深色模式變數
 // 放專案自己的 dark mode 顏色設定
@@ -18,7 +19,48 @@
 
 // 4. Bootstrap 主程式
 // Bootstrap 會根據前面設定好的變數產生元件、格線與 utilities
-@import "./bootstrap/scss/bootstrap";
+// @import "./bootstrap/scss/bootstrap";
+// 匯入bootstrap scss-docs-start import-stack
+// Configuration
+@import "./bootstrap/scss/maps";
+@import "./bootstrap/scss/mixins";
+@import "./bootstrap/scss/utilities";
+
+// Layout & components
+@import "./bootstrap/scss/root";
+@import "./bootstrap/scss/reboot";
+@import "./bootstrap/scss/type";
+@import "./bootstrap/scss/images";
+@import "./bootstrap/scss/containers";
+@import "./bootstrap/scss/grid";
+// @import "./bootstrap/scss/tables";
+@import "./bootstrap/scss/forms";
+@import "./bootstrap/scss/buttons";
+@import "./bootstrap/scss/transitions";
+// @import "./bootstrap/scss/dropdown";
+@import "./bootstrap/scss/button-group";
+@import "./bootstrap/scss/nav";
+@import "./bootstrap/scss/navbar";
+@import "./bootstrap/scss/card";
+@import "./bootstrap/scss/accordion";
+@import "./bootstrap/scss/breadcrumb";
+@import "./bootstrap/scss/pagination";
+@import "./bootstrap/scss/badge";
+// @import "./bootstrap/scss/alert";
+// @import "./bootstrap/scss/progress";
+@import "./bootstrap/scss/list-group";
+@import "./bootstrap/scss/close";
+// @import "./bootstrap/scss/toasts";
+@import "./bootstrap/scss/modal";
+// @import "./bootstrap/scss/tooltip";
+// @import "./bootstrap/scss/popover";
+@import "./bootstrap/scss/carousel";
+// @import "./bootstrap/scss/spinners";
+@import "./bootstrap/scss/offcanvas";
+// @import "./bootstrap/scss/placeholders";
+
+// Helpers
+@import "./bootstrap/scss/helpers";
 
 // 5. 專案文字樣式
 // 放設計稿定義的標題、內文、字級、字重與行高
@@ -27,7 +69,11 @@
 // 6. 專案自訂工具類
 // 放手寫的 utility class，比如說 cursor
 // 如果要修改 Bootstrap 的 $utilities map，則需要放在 Bootstrap 產生 utilities 之前
-// @import "./utilities";
+@import "./utilities";
+// Utilities
+@import "./bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
 
 // 7. 共用版面樣式
 // 放網站共用的大型版面區塊，例如 header、footer、navbar
