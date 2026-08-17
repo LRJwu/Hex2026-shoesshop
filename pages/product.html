@@ -10,19 +10,9 @@
 <body>
   <%- include('./layout/header'); -%>
     <main class="container">
-      <nav class="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">首頁</a></li>
-          <li class="breadcrumb-item"><a href="#">女鞋</a></li>
-          <li class="breadcrumb-item"><a href="#">所有商品</a></li>
-          <li class="breadcrumb-item active" aria-current="pag">
-            <a href="#">Platform 404</a>
-          </li>
-        </ol>
-      </nav>
-      <div class="row">
+      <div class="row g-l">
         <div class="col-lg-7">
-          <ul class="list-unstyled row row-cols-1 row-cols-lg-2 g-1 flex-nowrap flex-lg-wrap overflow-x-auto">
+          <ul class="list-unstyled row row-cols-1 row-cols-lg-2 g-1 flex-nowrap flex-lg-wrap overflow-x-auto mb-l">
             <li class="col">
               <img src="../assets/images/products/image-0.png" alt="產品照片：Platform 404" class="w-100" />
             </li>
@@ -49,11 +39,26 @@
             </li>
           </ul>
         </div>
-        <article class="col-lg-5 gap-3xl gap-lg-xl">
-          <section id="productInfo" class="d-grid gap-3">
-            <h1 class="h4 h2-lg">Platform 404</h1>
-            <h2 class="text-primary h6 h5-lg">
-              NT$2,600<span class="ms-2 fs-sm text-secondary text-decoration-line-through">NT$3,200</span>
+
+        <!-- 右側區塊 -->
+        <article class="d-grid col-lg-5 gap-3xl gap-lg-xl">
+          <!-- 商品資訊區塊1 -->
+          <section id="productInfo" class="d-grid gap-s">
+            <div class="d-grid gap-xs">
+              <nav class="breadcrumb mb-0">
+                <ol class="breadcrumb mb-0 fs-lsm">
+                  <li class="breadcrumb-item"><a class="text-gray-600 text-decoration-none" href="#">首頁</a></li>
+                  <li class="breadcrumb-item"><a class="text-gray-600 text-decoration-none" href="#">女鞋</a></li>
+                  <li class="breadcrumb-item"><a class="text-gray-600 text-decoration-none" href="#">所有商品</a></li>
+                  <li class="breadcrumb-item active" aria-current="pag">
+                    Platform 404
+                  </li>
+                </ol>
+              </nav>
+              <h1 class="h4 h2-lg">Platform 404</h1>
+            </div>
+            <h2 class="text-primary-400 h6 h5-lg">
+              NT$2,600<span class="ms-2 fs-psm fw-normal text-gray-500 text-decoration-line-through">NT$3,200</span>
             </h2>
             <p>
               Platform 404
@@ -63,27 +68,29 @@
               鞋身選用柔軟皮革材質，打造出清新卻不失個性的氛圍，並以鞋面透氣孔設計提升穿著體驗，兼顧質感與舒適度，適合日常長時間著用。無論是街頭穿搭、日常通勤或週末出遊都能輕鬆駕馭。
             </p>
           </section>
-          <from id="SpecCTA" class="d-grid gap-5">
-            <section>
-              <h3 class="fs-md">顏色</h3>
-              <ul class="list-unstyled row row-cols-5 text-center">
+          <!--END 商品資訊區塊1 -->
+
+          <from id="SpecCTA" class="d-grid gap-l">
+            <section class="d-grid gap-xs">
+              <h3 class="fs-pmd">顏色</h3>
+              <ul class="list-unstyled row row-cols-5 g-xs text-center mb-0">
                 <li class="col">
                   <div class="card border-0">
                     <img class="w-100 mb-1" src="../assets/images/products/product-0.png" alt="顏色卡-藍色" />
-                    <h4 class="fs-md text-secondary">藍色</h4>
+                    <h4 class="fs-lmd text-secondary">藍色</h4>
                   </div>
                 </li>
                 <li class="col">
                   <div class="card border-0">
                     <img class="w-100 mb-1" src="../assets/images/products/product-1.png" alt="顏色卡-卡其色" />
-                    <h4 class="fs-md text-secondary">卡其色</h4>
+                    <h4 class="fs-pmd text-secondary">卡其色</h4>
                   </div>
                 </li>
               </ul>
             </section>
-            <section>
-              <h3 class="fs-md">顏色</h3>
-              <ul class="list-unstyled row row-cols-2 row-cols-lg-3 g-2 text-center">
+            <section class="d-grid gap-xs">
+              <h3 class="fs-pmd">顏色</h3>
+              <ul class="list-unstyled row row-cols-2 row-cols-lg-3 g-2 text-center mb-0">
                 <li class="col">
                   <button type="button" class="btn btn-outline-dark w-100" name="size" value="35(22.5cm)">
                     35(22.5cm)
@@ -130,9 +137,9 @@
                   </button>
                 </li>
               </ul>
-              <h6 class="fs-sm text-danger">僅剩3雙</h6>
+              <h6 class="fs-psm text-danger">僅剩3雙</h6>
             </section>
-            <ul class="list-unstyled row g-2">
+            <ul class="list-unstyled row gx-2">
               <li class="order-2 order-lg-1 col-auto col-lg-6">
                 <button type="button" class="btn w-100 btn-outline-dark">
                   <i class="bi bi-heart"></i> <span class="d-none d-lg-inline">加入收藏</span>
@@ -147,8 +154,8 @@
           </from>
           <section id="productInfo2">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                <h4 class="">商品材質</h4>
+              <li class="list-group-item d-grid gap-xxs py-s px-0">
+                <h4 class="fs-lmd">商品材質</h4>
                 <p class="text-secondary">
                   鞋面：合成皮革（Synthetic Leather）<br>
                   內裡：透氣網布材質，提升舒適與排汗性<br>
@@ -156,16 +163,16 @@
                   鞋帶：聚酯纖維，耐拉扯不易鬆脫
                 </p>
               </li>
-              <li class="list-group-item">
-                <h4 class="">購買須知</h4>
+              <li class="list-group-item d-grid gap-xxs py-s px-0">
+                <h4 class="fs-lmd">購買須知</h4>
                 <p class="text-secondary">
                   商品顏色因螢幕顯示可能略有差異，請以實品為準。<br>
                   建議首次穿著前試穿確認尺寸，避免影響退換貨權益。<br>
                   本商品為限量發售，庫存有限，如需更換尺寸請儘早聯繫客服協助處理。<br>
                 </p>
               </li>
-              <li class="list-group-item">
-                <h4 class="">保養方式</h4>
+              <li class="list-group-item d-grid gap-xxs py-s px-0">
+                <h4 class="fs-lmd">保養方式</h4>
                 <p class="text-secondary">
                   建議以乾布或微濕軟布擦拭表面汙漬，避免機洗或長時間浸水。<br>
                   收納時請放置於乾燥通風處，避免日曬及高溫導致變形或龜裂。<br>
@@ -175,48 +182,48 @@
             </ul>
           </section>
         </article>
-        <section class="pyl-2xl py-lg-3xl">
-          <h2 class="h5 h4-lg">你可能也喜歡...</h2>
-          <ul class="list-unstyled row flex-nowrap flex-md-wrap overflow-auto">
-            <li class="col-9">
-              <div class="card border-0 rounded-0">
-                <img class="card-img-top rounded-0" src="../assets/images/products/product-7.png">
-                <div class="card-body px-0">
-                  <h3 class="h6">VM001</h3>
-                  <h4 class="fs-md">NT$2,600</h4>
-                </div>
-              </div>
-            </li>
-            <li class="col-9">
-              <div class="card border-0 rounded-0">
-                <img class="card-img-top rounded-0" src="../assets/images/products/product-8.png">
-                <div class="card-body px-0">
-                  <h3 class="h6">Melty Kiss</h3>
-                  <h4 class="fs-md">NT$4,000</h4>
-                </div>
-              </div>
-            </li>
-            <li class="col-9">
-              <div class="card border-0 rounded-0">
-                <img class="card-img-top rounded-0" src="../assets/images/products/product-9.png">
-                <div class="card-body px-0">
-                  <h3 class="h6">BOOMBLOK</h3>
-                  <h4 class="fs-md">NT$3,200</h4>
-                </div>
-              </div>
-            </li>
-            <li class="col-9">
-              <div class="card border-0 rounded-0">
-                <img class="card-img-top rounded-0" src="../assets/images/products/product-10.png">
-                <div class="card-body px-0">
-                  <h3 class="h6">Sugar Snap</h3>
-                  <h4 class="fs-md">NT$3,200</h4>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </section>
       </div>
+      <section class="d-grid gap-m py-2xl py-lg-3xl">
+        <h2 class="h5 h4-lg">你可能也喜歡...</h2>
+        <ul class="list-unstyled row flex-nowrap flex-md-wrap overflow-auto g-m">
+          <li class="col-10">
+            <div class="d-grid gap-s">
+              <img class="card-img-top rounded-0" src="../assets/images/products/product-7.png">
+              <div class="card-body px-0">
+                <h3 class="h6">VM001</h3>
+                <h4 class="fs-lmd">NT$2,600</h4>
+              </div>
+            </div>
+          </li>
+          <li class="col-10">
+            <div class="d-grid gap-s">
+              <img class="card-img-top rounded-0" src="../assets/images/products/product-8.png">
+              <div class="card-body px-0">
+                <h3 class="h6">Melty Kiss</h3>
+                <h4 class="fs-lmd">NT$4,000</h4>
+              </div>
+            </div>
+          </li>
+          <li class="col-10">
+            <div class="d-grid gap-s">
+              <img class="card-img-top rounded-0" src="../assets/images/products/product-9.png">
+              <div class="card-body px-0">
+                <h3 class="h6">BOOMBLOK</h3>
+                <h4 class="fs-lmd">NT$3,200</h4>
+              </div>
+            </div>
+          </li>
+          <li class="col-10">
+            <div class="d-grid gap-s">
+              <img class="card-img-top rounded-0" src="../assets/images/products/product-10.png">
+              <div class="card-body px-0">
+                <h3 class="h6">Sugar Snap</h3>
+                <h4 class="fs-lmd">NT$3,200</h4>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
     </main>
     <%- include('./layout/footer'); -%>
 
