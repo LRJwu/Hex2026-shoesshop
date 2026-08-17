@@ -1,0 +1,21 @@
+.bg-aboutHero {
+  background: url(../assets/images/about/hero.png) center center/cover no-repeat;
+  min-height: 240px;
+  @include media-breakpoint-up(lg){
+    min-height: 400px;
+  }
+}
+
+.list-border-l li {
+  list-style-type: none;
+  border-left: 3px solid var(--bs-gray-300);
+  padding: 0 map-get($spacers, "s" );
+  margin-left: 0;
+}
+
+.ulLink-arrow-up-right li {
+  font-family: bootstrap-icons !important;
+  list-style: "\f144";
+  font-size: 15px;
+  padding-left: 10.5px;
+}
