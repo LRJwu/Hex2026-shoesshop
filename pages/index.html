@@ -9,18 +9,19 @@
   <body>
     <%- include('./layout/header'); -%>
     <ul class="navbar-nav flex-row text-center d-md-none">
-        <li class="nav-item flex-fill">
-          <a class="nav-link bg-primary-200 py-s" href="products.html">商品列表</a>
-        </li>
-        <li class="nav-item flex-fill">
-          <a class="nav-link bg-primary-100 py-s" href="about.html">品牌故事</a>
-        </li>
-      </ul>
-    <header class="bg-1 vh-100 d-flex justifity-content-center align-items-center">
+      <li class="nav-item flex-fill">
+        <a class="nav-link bg-primary-200 py-s" href="products.html">商品列表</a>
+      </li>
+      <li class="nav-item flex-fill">
+        <a class="nav-link bg-primary-100 py-s" href="about.html">品牌故事</a>
+      </li>
+    </ul>
+    <header class="bg-1 vh-100 
+    d-flex justifity-content-center align-items-center py-l">
       <section class="container">
         <div class="mb-xl mb-md-3xl">
-          <h1 class="display-2 display-md-1 mb-1 mb-md-3">URBNSTEP</h1>
-          <h2 class="h5">Your Step, Your Statement</h2>
+          <h1 class="display-2 display-md-1 mb-2 mb-md-3">URBNSTEP</h1>
+          <h2 class="h5 h3-lg">Your Step, Your Statement</h2>
         </div>
         <a href="products.html" class="btn btn-primary" target="_blank">立即選購</a>
       </section>
@@ -31,40 +32,40 @@
           New Arrival
           <span class="d-block h4 h2-lg mt-xs mt-md-s">新品上市</span>
         </h2>
-        <ul class="list-unstyled row row-cols-2 row-cols-lg-4 g-4">
+        <ul class="list-unstyled row row-cols-2 gx-s gy-4 gx-lg-4 gy-lg-5">
           <li class="col">
             <div class="card border-0 rounded-0">
               <img class="card-img-top rounded-0" src="../assets/images/index/new-1.png" alt="產品圖片：Monoverse">
-              <div class="card-body px-0">
-                <h3 class="h5">Monoverse</h3>
-                <h4 class="fs-md">NT$2,600</h4>
+              <div class="card-body p-0 pt-xs pt-lg-s">
+                <h3 class="h6 h5-lg">Monoverse</h3>
+                <p class="fs-lmd fw-medium">NT$2,600</p>
               </div>
             </div>
           </li>
           <li class="col">
             <div class="card border-0 rounded-0">
               <img class="card-img-top rounded-0" src="../assets/images/index/new-2.png" alt="產品圖片：PLATFORM 404">
-              <div class="card-body px-0">
-                <h3 class="h5">PLATFORM 404</h3>
-                <h4 class="fs-md">NT$2,600</h4>
+              <div class="card-body p-0 pt-xs pt-lg-s">
+                <h3 class="h6 h5-lg">PLATFORM 404</h3>
+                <p class="fs-lmd fw-medium">NT$2,600</p>
               </div>
             </div>
           </li>
           <li class="col">
             <div class="card border-0 rounded-0">
               <img class="card-img-top rounded-0" src="../assets/images/index/new-3.png" alt="產品圖片：URBN Force">
-              <div class="card-body px-0">
-                <h3 class="h5">URBN Force</h3>
-                <h4 class="fs-md">NT$3,200</h4>
+              <div class="card-body p-0 pt-xs pt-lg-s">
+                <h3 class="h6 h5-lg">URBN Force</h3>
+                <p class="fs-lmd fw-medium">NT$3,200</p>
               </div>
             </div>
           </li>
           <li class="col">
             <div class="card border-0 rounded-0">
               <img class="card-img-top rounded-0" src="../assets/images/index/new-4.png" alt="產品圖片：Mode90">
-              <div class="card-body px-0">
-                <h3 class="h5">Mode90</h3>
-                <h4 class="fs-md">NT$4,000</h4>
+              <div class="card-body p-0 pt-xs pt-lg-s">
+                <h3 class="h6 h5-lg">Mode90</h3>
+                <p class="fs-lmd fw-medium">NT$4,000</p>
               </div>
             </div>
           </li>
@@ -73,33 +74,33 @@
     </section>
     <section id="part-2" class="py-2xl py-5xl">
       <div class="container">
-        <h2>熱銷補貨</h2>
-        <ul class="list-unstyled row flex-nowrap flex-md-wrap overflow-auto">
-          <li class="col">
-            <div class="card position-relative">
+        <h2 class="h4 h2-lg mb-3">熱銷補貨</h2>
+        <ul class="list-unstyled row flex-nowrap flex-md-wrap overflow-auto g-3 g-lg-4">
+          <li class="col-10 col-md-3">
+            <div class="position-relative">
               <img src="../assets/images/products/product-3.png" alt="熱銷補貨照片" class="card-img">
-                <h6 class="badge border-0 posititon-absolute top-0 start-0"></h6>
+                <h6 class="badge bg-primary-100 text-primary-400 fs-lsm py-xs px-s fw-medium lh-base position-absolute top-0 start-0">人氣 No.1</h6>
               </img>
             </div>
           </li>
-          <li class="col">
-            <div class="card position-relative">
+          <li class="col-10 col-md-3">
+            <div class="position-relative">
               <img src="../assets/images/products/product-4.png" alt="熱銷補貨照片" class="card-img">
-                <h6 class="badge border-0 posititon-absolute top-0 start-0"></h6>
+                <h6 class="badge bg-primary-100 text-primary-400 fs-lsm py-xs px-s fw-medium lh-base position-absolute top-0 start-0">人氣 No.1</h6>
               </img>
             </div>
           </li>
-          <li class="col">
-            <div class="card position-relative">
+          <li class="col-10 col-md-3">
+            <div class="position-relative">
               <img src="../assets/images/products/product-5.png" alt="熱銷補貨照片" class="card-img">
-                <h6 class="badge border-0 posititon-absolute top-0 start-0"></h6>
+                <h6 class="badge bg-primary-100 text-primary-400 fs-lsm py-xs px-s fw-medium lh-base position-absolute top-0 start-0">人氣 No.1</h6>
               </img>
             </div>
           </li>
-          <li class="col">
-            <div class="card position-relative">
+          <li class="col-10 col-md-3">
+            <div class="position-relative">
               <img src="../assets/images/products/product-6.png" alt="熱銷補貨照片" class="card-img">
-                <h6 class="badge border-0 posititon-absolute top-0 start-0"></h6>
+                <h6 class="badge bg-primary-100 text-primary-400 fs-lsm py-xs px-s fw-medium lh-base position-absolute top-0 start-0">人氣 No.1</h6>
               </img>
             </div>
           </li>
@@ -107,12 +108,12 @@
       </div>
     </section>
     <section id="part-3" class="bg-2 text-white py-5xl py-lg-6xl">
-      <div class="container text-center">
-        <h2 class="mb-l mb-lg-xl">
+      <div class="container text-center posititon-relative deco">
+        <h2 class="h2 display-lg-2 mb-l mb-lg-xl">
           URBNSTEP
-          <span class="text-primary d-block d-lg-inline">x</span>
+          <span class="h3 h1-lg text-primary d-block d-lg-inline my-2 my-lg-0">x</span>
           Kevin Chen
-          <span class="d-block h4 mt-3">跨界聯名，限量發售</span>
+          <span class="h5 h2-lg d-block mt-3 mb-0">跨界聯名，限量發售</span>
         </h2>
         <p class="fs-pmd fs-lg-plg text-gray-500 mb-xl mb-lg-3xl">
           新銳漫畫家 Kevin Chen 親自操刀設計<sapn class="d-none d-lg-inline">，</sapn><span class="d-block d-lg-none mt-xxs mt-lg-auto">街頭能量全面引爆！</span>

@@ -9,6 +9,9 @@ h5:only-of-type,
 h6:only-of-type,
 p:only-of-type{
     margin-bottom: 0;
+    & *,&::before,&::after{
+        margin-bottom: 0;
+    }
 }
 // 遍歷所有斷點 (xs, sm, md, lg, xl, xxl)
 @each $breakpoint,$value in $grid-breakpoints{

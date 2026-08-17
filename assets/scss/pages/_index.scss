@@ -10,7 +10,35 @@
   background: url("/assets/images/index/banner-co-branded.png")no-repeat center/cover;
   background-color: var(--bs-gray-900);
   color: white;
-  @include media-breakpoint-down(md){
-    background-image: url(/assets/images/index/banner-co-branded-sm.png);
+  @include media-breakpoint-down(lg){
+    background-image: url(/assets/images/index/banner-co-branded-sm.png) ;
+  }
+}
+.deco{
+  position: relative;
+  &::before,&::after{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+    background-repeat: no-repeat;
+  }
+  &::before{
+    width: calc(50% + 27px);
+    height:calc(50% + 27px);
+    max-width:calc(332px + 32px);
+    transform: translate(-100%,-100%);
+    background-image: url(/assets/images/index/star.svg);
+    background-size: 48px;
+    background-position: 0 0;
+  }
+  &::after{
+    width: calc(50% + 40px);
+    height:calc(50% + 40px);
+    max-width:calc(332px + 40px);
+    background-image: url(/assets/images/index/sparkle.svg);
+    background-size: 76px;
+    background-position: center right;
   }
 }
