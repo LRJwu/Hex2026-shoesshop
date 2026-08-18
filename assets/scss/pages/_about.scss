@@ -1,5 +1,5 @@
 .bg-aboutHero {
-  background: url(../assets/images/about/hero.png) center center/cover no-repeat;
+  background: url(/assets/images/about/hero.png) center center/cover no-repeat;
   min-height: 240px;
   @include media-breakpoint-up(lg){
     min-height: 400px;
